@@ -1,0 +1,160 @@
+body{
+  font-family: Parkinsans, sans-serif;
+}
+
+*{
+  /* color: #283618; */
+  border: 0;
+}
+
+.link:hover{
+  cursor: pointer;
+}
+
+img{
+  object-fit: cover;
+}
+
+.body{
+  background-color:#FBFAEF;
+  margin-top: 4.5rem;
+}
+
+
+.header{
+  position: fixed;
+  top: 0;
+  background-color: #FBFAEF;
+  width: 100%;
+  z-index: 1;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3),-5px -5px 10px rgba(255, 255, 255, 0.5);
+}
+
+.logo:hover{
+  cursor: pointer;
+}
+
+.inputBox{
+  background-color: #dbdad9;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+.inpContainer{
+  background-color: white;
+}
+
+.genreBox{
+  height: 10rem;
+  background-color: rgb(121, 121, 121);
+  margin: 1rem;
+}
+
+.exploreBtn{
+  color: white;
+  background-color: #283618;
+  &:hover{
+    cursor: pointer;
+  }
+}
+
+.card{
+  border: none;
+}
+
+.features{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+
+.copy{
+  font-size: small;
+}
+
+.feature{
+  background-color: #FBFAEF;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.3),-2px -2px 7px rgba(116, 116, 116, 0.3);
+}
+
+.bookName, .authorName {
+  display: -webkit-box;          /* Enables multiline text truncation */
+  -webkit-line-clamp: 2;        /* Limits to 2 lines */
+  -webkit-box-orient: vertical; /* Specifies vertical orientation */
+  overflow: hidden;             /* Hides overflow text */
+  text-overflow: ellipsis;      /* Adds ellipsis (...) */
+}
+
+
+.gallery-container {
+  position: relative;
+  height: 300px;
+  margin: 3rem 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+.gallery-content {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.gallery-track {
+  display: flex;
+  height: auto;
+  min-height: 200px;
+  justify-content: center;
+  align-items: center;
+  cursor: grab;
+  transform-style: preserve-3d;
+  width: 100%;
+}
+
+.gallery-item {
+  position: absolute;
+  display: flex;
+  height: fit-content;
+  align-items: center;
+  justify-content: center;
+  padding: 8%;
+  backface-visibility: hidden;
+}
+
+.gallery-img {
+  pointer-events: none;
+  height: 200px;
+  width: 300px;
+  border-radius: 15px;
+  border: 3px solid #fff;
+  object-fit: cover;
+  transition: 0.3s ease;
+}
+
+.gallery-item:hover .gallery-img {
+  transform: scale(1.05);
+  transition: 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .gallery-item {
+    padding: 6%;
+  }
+  .gallery-img {
+    height: 100px;
+    width: 220px;
+  }
+}
